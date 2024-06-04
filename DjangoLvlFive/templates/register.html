@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+    {% block body_block %}
+        <h1>Registeration Page</h1>
+        <div class="jumbotron" style="background-color: #E4E1DC;">
+            {% if registered %}
+                <h1>Thanks for registering</h1>
+            {% else %}
+
+               <h3>Fill in the form:</h3>
+
+                <form method="post" enctype="multipart/form-data">
+                    <!-- enctype is for forms the request  extra media-->
+                    {% csrf_token %}
+                    {{ user_form.as_p}}
+                    {{ profile_form.as_p}}
+                    <input type="submit" name="" value="Register">
+            {% endif %}
+        </div>
+    {% endblock %}

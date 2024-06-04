@@ -1,0 +1,13 @@
+.navbar.navbar-expand-lg{
+background-color: #c8940c;
+}
+
+#logo{
+ width: 20px;
+ height: 15px;
+
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Adjust the spacing as needed */
+  }
